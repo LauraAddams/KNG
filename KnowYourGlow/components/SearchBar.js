@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { View, TextInput, Button } from 'react-native';
+import { View, TextInput } from 'react-native';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import { containers } from '../constants/Containers';
-import { brandTransparent } from '../constants/Colors';
 
 export default class SearchBar extends Component {
   state = { term: '' };
@@ -18,9 +18,10 @@ export default class SearchBar extends Component {
           autoCorrect={false}
           placeholder="Search"
         />
-        <Button
-          title="Search"
-          backgroundColor={brandTransparent}
+        <MaterialCommunityIcons
+          name="magnify"
+          size={24}
+          style={{ paddingRight: 20 }}
           onPress={() => this.props.onPressSearch(this.state.term)}
         />
       </View>

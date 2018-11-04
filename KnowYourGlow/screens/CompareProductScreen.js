@@ -3,7 +3,7 @@ import { ScrollView } from 'react-native';
 
 export default class CompareProductScreen extends React.Component {
   static navigationOptions = {
-    title: 'CompareProducts',
+    title: 'COMPARE PRODUCTS',
   };
 
   render() {

@@ -7,7 +7,7 @@ import { font } from '../constants/Fonts';
 
 export default class ProductScreen extends React.Component {
   static navigationOptions = {
-    title: 'Product',
+    title: null,
   };
 
   constructor() {

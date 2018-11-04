@@ -9,7 +9,7 @@ import { appBackgroundColor } from '../constants/Colors';
 
 export default class SearchProductScreen extends React.Component {
   static navigationOptions = {
-    title: 'SearchProducts',
+    title: 'SEARCH PRODUCTS',
   };
 
   constructor(props) {

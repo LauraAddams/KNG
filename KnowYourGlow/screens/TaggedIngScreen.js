@@ -3,7 +3,7 @@ import { ScrollView } from 'react-native';
 
 export default class TaggedIngScreen extends React.Component {
   static navigationOptions = {
-    title: 'TaggedIng',
+    title: 'MY IRRITANTS',
   };
 
   render() {
