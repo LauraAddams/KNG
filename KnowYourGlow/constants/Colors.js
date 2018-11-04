@@ -6,9 +6,11 @@ export const brandGray = '#DBDBDB';
 export const brandPink = '#EBC8BC';
 export const brandRed = '#CE2630';
 export const brandYellow = '#F4CD4E';
-export const brandTeal = '#C5D4F0';
+export const brandBlue = '#C5D4F0';
 export const brandTransparent = 'rgba(255,255,255,0)';
 export const brandShadow = '#000000';
+
+export const colorList = [brandPink, brandRed, brandYellow, brandBlue];
 
 const tintColor = '#2f95dc';
 

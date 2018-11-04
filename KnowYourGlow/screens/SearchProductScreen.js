@@ -1,10 +1,11 @@
-/* eslint no-underscore-dangle: 0 */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { View, Button, Text, ActivityIndicator } from 'react-native';
 
 import { searchProducts } from '../Utilities/api/skincareHelper';
 import SearchBar from '../components/SearchBar';
+import List from '../components/List';
+import { appBackgroundColor } from '../constants/Colors';
 
 export default class SearchProductScreen extends React.Component {
   static navigationOptions = {
@@ -20,20 +21,23 @@ export default class SearchProductScreen extends React.Component {
     };
   }
 
-  onPressSearch = (query) => {
-    this._query(searchProducts(query));
+  onPressSearch = (query) => { this.apiQuery(searchProducts(query)); }
+
+  onProductPress = (response) => {
+    console.log('helllooooo');
+    this.props.navigation.navigate('Product', response);
   }
 
-  _query = (query) => {
+  apiQuery = (query) => {
     this.setState({ isLoading: true });
     fetch(query)
       .then(response => response.json())
-      .then(json => this._response(json))
+      .then(json => this.apiResponse(json))
       .catch(error =>
         this.setState({ isLoading: false }));
   }
 
-  _response = (response) => {
+  apiResponse = (response) => {
     this.setState({ isLoading: false });
 
     if (response.length) {
@@ -45,11 +49,11 @@ export default class SearchProductScreen extends React.Component {
     }
   }
 
-  _renderEmptyState = () => {
+  renderEmptyState = () => {
     if (this.state.emptyState) {
       return (
         <View>
-          <Text>Hi</Text>
+          <Text>I am the empty state ^-^</Text>
         </View>
       );
     }
@@ -58,17 +62,17 @@ export default class SearchProductScreen extends React.Component {
 
   render() {
     const { navigate } = this.props.navigation;
-    const spinner = this.state.loading ? <ActivityIndicator size="large" /> : null;
+    const spinner = this.state.isLoading ? <ActivityIndicator size="large" /> : null;
 
     return (
-      <View>
+      <View style={{ flex: 1, backgroundColor: appBackgroundColor }}>
         <SearchBar onPressSearch={this.onPressSearch} />
         {spinner}
-        {this._renderEmptyState()}
+        {this.renderEmptyState()}
 
-        <Button
-          title="Product"
-          onPress={() => navigate('Product')}
+        <List
+          products={this.state.products}
+          onProductPress={this.onProductPress}
         />
       </View>
     );
