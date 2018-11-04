@@ -1,43 +1,43 @@
 import { StyleSheet } from 'react-native';
-import * as brand from '../constants/Fonts';
+import * as fonts from '../constants/Fonts';
 import { brandBlack, brandWhite } from '../constants/Colors';
 
 const font = StyleSheet.create({
   smallBold: {
-    fontSize: brand.smallBoldSize,
-    fontFamily: brand.serifItalic,
+    fontSize: fonts.smallBoldSize,
+    fontFamily: fonts.serifItalic,
     color: brandBlack,
   },
   small: {
-    fontSize: brand.smallSize,
-    fontWeight: brand.fontBold,
-    fontFamily: brand.sansSerif,
+    fontSize: fonts.smallSize,
+    fontWeight: fonts.fontBold,
+    fontFamily: fonts.sansSerif,
     letterSpacing: 1,
     color: brandBlack,
   },
   medium: {
-    fontSize: brand.mediumSize,
+    fontSize: fonts.mediumSize,
     letterSpacing: 2,
-    fontFamily: brand.sansSerif,
+    fontFamily: fonts.sansSerif,
     color: brandBlack,
   },
   p: {
-    fontSize: brand.paragraphSize,
-    fontFamily: brand.serif,
+    fontSize: fonts.paragraphSize,
+    fontFamily: fonts.serif,
     color: brandBlack,
   },
   button: {
-    fontSize: brand.smallSize,
+    fontSize: fonts.smallSize,
     letterSpacing: 3,
-    fontFamily: brand.sansSerif,
-    fontWeight: brand.fontBold,
+    fontFamily: fonts.sansSerif,
+    fontWeight: fonts.fontBold,
     textAlign: 'center',
     color: brandWhite,
   },
   navHeader: {
-    fontSize: brand.navSize,
+    fontSize: fonts.navSize,
     letterSpacing: 4,
-    fontFamily: brand.sansSerif,
+    fontFamily: fonts.sansSerif,
     color: brandBlack,
   },
 });
