@@ -2,8 +2,8 @@ import React from 'react';
 import { View, ScrollView, Text, StyleSheet } from 'react-native';
 
 import { appBackgroundColor } from '../constants/Colors';
-import { containers } from '../constants/Containers';
-import { font } from '../constants/Fonts';
+import containers from '../styles/containers';
+import font from '../styles/fonts';
 
 export default class ProductScreen extends React.Component {
   static navigationOptions = {

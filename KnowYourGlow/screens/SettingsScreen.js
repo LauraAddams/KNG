@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
 import { appBackgroundColor, brandBlack, brandPink, brandRed, brandYellow, brandBlue } from '../constants/Colors';
-import { font } from '../constants/Fonts';
+import font from '../styles/fonts';
 
 const styles = StyleSheet.create({
   select: {

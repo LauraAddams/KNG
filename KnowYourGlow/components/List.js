@@ -5,7 +5,7 @@ import { FlatList } from 'react-native';
 import ListItemProduct from './ListItemProduct';
 import { colorList } from '../constants/Colors';
 
-import { fetchProduct } from '../Utilities/api/skincareHelper';
+import { fetchProduct } from '../utilities/api/skincareHelper';
 
 export default class List extends Component {
   onPressItem = (id) => { this.apiQuery(fetchProduct(id)); };

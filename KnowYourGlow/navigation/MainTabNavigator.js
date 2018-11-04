@@ -12,7 +12,7 @@ import SettingsScreen from '../screens/SettingsScreen';
 import TaggedIngScreen from '../screens/TaggedIngScreen';
 
 import { appBackgroundColor, brandBlack } from '../constants/Colors';
-import { font } from '../constants/Fonts';
+import font from '../styles/fonts';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,

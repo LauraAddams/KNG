@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { View, Text, TouchableHighlight, StyleSheet } from 'react-native';
 
-import { containers } from '../constants/Containers';
-import { font } from '../constants/Fonts';
+import containers from '../styles/containers';
+import font from '../styles/fonts';
 import { brandGray, brandShadow, brandWhite } from '../constants/Colors';
 
 const styles = StyleSheet.create({
@@ -32,7 +32,6 @@ export default class ListItem extends Component {
   state = { visibleModal: false }
 
   _onPress = () => {
-    console.log('suit');
     this.props.onPressItem(this.props.item.id);
   }
 

@@ -1,17 +1,15 @@
 import { StyleSheet } from 'react-native';
-import { appBackgroundColor, brandGray, brandWhite, brandTransparent, brandShadow } from './Colors';
-import { fontLight, fontMedium } from './Fonts';
+import * as brand from '../constants/GlobalStyles';
+import * as colors from '../constants/Colors';
+import { fontLight, fontMedium } from '../constants/Fonts';
 
-export const paddingDefault = 15;
-export const brandBorderRadius = 20;
-
-export const containers = StyleSheet.create({
+const containers = StyleSheet.create({
   centerFull: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    padding: paddingDefault,
-    backgroundColor: appBackgroundColor,
+    padding: brand.paddingDefault,
+    backgroundColor: colors.appBackgroundColor,
   },
   search: {
     flexDirection: 'row',
@@ -22,10 +20,10 @@ export const containers = StyleSheet.create({
     marginBottom: 20,
     marginTop: 20,
     height: 40,
-    borderColor: brandGray,
+    borderColor: colors.brandGray,
     borderWidth: 1,
-    borderRadius: brandBorderRadius,
-    backgroundColor: brandWhite,
+    borderRadius: brand.brandBorderRadius,
+    backgroundColor: colors.brandWhite,
   },
   input: {
     flexGrow: 1,
@@ -40,8 +38,8 @@ export const containers = StyleSheet.create({
     paddingTop: 10,
     marginBottom: 15,
     borderBottomWidth: 1,
-    borderBottomColor: brandGray,
-    backgroundColor: brandTransparent,
+    borderBottomColor: colors.brandGray,
+    backgroundColor: colors.brandTransparent,
   },
   form: {
     flexDirection: 'column',
@@ -49,7 +47,7 @@ export const containers = StyleSheet.create({
     backgroundColor: 'white',
     padding: 20,
     margin: 20,
-    shadowColor: brandShadow,
+    shadowColor: colors.brandShadow,
     shadowOffset: { width: 2, height: 4 },
     shadowOpacity: 0.1,
     shadowRadius: 5,
@@ -73,3 +71,5 @@ export const containers = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default containers;

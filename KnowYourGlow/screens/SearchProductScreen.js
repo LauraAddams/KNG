@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { View, Button, Text, ActivityIndicator } from 'react-native';
 
-import { searchProducts } from '../Utilities/api/skincareHelper';
+import { searchProducts } from '../utilities/api/skincareHelper';
 import SearchBar from '../components/SearchBar';
 import List from '../components/List';
 import { appBackgroundColor } from '../constants/Colors';
@@ -24,7 +24,6 @@ export default class SearchProductScreen extends React.Component {
   onPressSearch = (query) => { this.apiQuery(searchProducts(query)); }
 
   onProductPress = (response) => {
-    console.log('helllooooo');
     this.props.navigation.navigate('Product', response);
   }
 
