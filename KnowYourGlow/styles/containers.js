@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 import * as brand from '../constants/GlobalStyles';
 import * as colors from '../constants/Colors';
-import { fontLight, fontMedium } from '../constants/Fonts';
+import { fontMedium } from '../constants/Fonts';
 
 const containers = StyleSheet.create({
   centerFull: {
@@ -30,27 +30,6 @@ const containers = StyleSheet.create({
     marginLeft: 25,
     fontSize: 16,
     fontWeight: fontMedium,
-  },
-  inputForm: {
-    fontSize: 16,
-    fontWeight: fontLight,
-    paddingBottom: 7,
-    paddingTop: 10,
-    marginBottom: 15,
-    borderBottomWidth: 1,
-    borderBottomColor: colors.brandGray,
-    backgroundColor: colors.brandTransparent,
-  },
-  form: {
-    flexDirection: 'column',
-    alignSelf: 'stretch',
-    backgroundColor: 'white',
-    padding: 20,
-    margin: 20,
-    shadowColor: colors.brandShadow,
-    shadowOffset: { width: 2, height: 4 },
-    shadowOpacity: 0.1,
-    shadowRadius: 5,
   },
   taggedContainer: {
     flexDirection: 'row',

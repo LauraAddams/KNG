@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, Button, Text, ActivityIndicator } from 'react-native';
+import { View, Text, ActivityIndicator } from 'react-native';
 
 import { searchProducts } from '../utilities/api/skincareHelper';
 import SearchBar from '../components/SearchBar';
@@ -52,7 +52,7 @@ export default class SearchProductScreen extends React.Component {
     if (this.state.emptyState) {
       return (
         <View>
-          <Text>I am the empty state ^-^</Text>
+          <Text />
         </View>
       );
     }

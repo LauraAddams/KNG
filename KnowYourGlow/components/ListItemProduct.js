@@ -22,18 +22,18 @@ const styles = StyleSheet.create({
 });
 
 export default class ListItem extends Component {
-  state = { visibleModal: false }
+  state = { isModalVisible: false }
 
   onPress = () => {
     this.props.onPressItem(this.props.item.id);
   }
 
   onPressAdd = () => {
-    this.setState({ visibleModal: true });
+    this.setState({ isModalVisible: true });
   }
 
   resetModal() {
-    this.setState({ visibleModal: false });
+    this.setState({ isModalVisible: false });
   }
 
   render() {
