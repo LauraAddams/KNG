@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { View, TextInput } from 'react-native';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { Icon } from 'react-native-elements';
 
 import containers from '../styles/containers';
 import { brandBlack } from '../constants/Colors';
@@ -19,11 +19,12 @@ export default class SearchBar extends Component {
           autoCorrect={false}
           placeholder="Search"
         />
-        <MaterialCommunityIcons
+        <Icon
+          type="material-community"
           name="magnify"
           size={24}
           color={brandBlack}
-          style={{ paddingRight: 20 }}
+          iconStyle={{ paddingRight: 20 }}
           onPress={() => this.props.onPressSearch(this.state.term)}
         />
       </View>

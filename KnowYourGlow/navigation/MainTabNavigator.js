@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { Icon } from 'react-native-elements';
 
 import AddProductScreen from '../screens/AddProductScreen';
 import CompareProductScreen from '../screens/CompareProductScreen';
@@ -33,9 +33,10 @@ const HomeStack = createStackNavigator({
 HomeStack.navigationOptions = {
   tabBarLabel: 'Home',
   tabBarIcon: ({ focused }) => (
-    <MaterialCommunityIcons
+    <Icon
       focused={focused}
       color={brandBlack}
+      type="material-community"
       name="emoticon-happy"
       size={26}
     />
@@ -60,9 +61,10 @@ const SearchStack = createStackNavigator({
 SearchStack.navigationOptions = {
   tabBarLabel: 'Search',
   tabBarIcon: ({ focused }) => (
-    <MaterialCommunityIcons
+    <Icon
       focused={focused}
       color={brandBlack}
+      type="material-community"
       name="magnify"
       size={26}
     />
@@ -86,9 +88,10 @@ const AddStack = createStackNavigator({
 AddStack.navigationOptions = {
   tabBarLabel: 'Add',
   tabBarIcon: ({ focused }) => (
-    <MaterialCommunityIcons
+    <Icon
       focused={focused}
       color={brandBlack}
+      type="material-community"
       name="plus"
       size={26}
     />
@@ -112,9 +115,10 @@ const CompareStack = createStackNavigator({
 CompareStack.navigationOptions = {
   tabBarLabel: 'Compare',
   tabBarIcon: ({ focused }) => (
-    <MaterialCommunityIcons
+    <Icon
       focused={focused}
       color={brandBlack}
+      type="material-community"
       name="checkbox-multiple-blank-circle-outline"
       size={26}
     />

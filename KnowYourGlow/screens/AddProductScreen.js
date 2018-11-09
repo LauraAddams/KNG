@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Button, TextInput, Text } from 'react-native';
+import { View, TextInput, Text } from 'react-native';
+import { Button } from 'react-native-elements';
 
 import { form } from '../styles/globalStyles';
 import containers from '../styles/containers';
@@ -17,10 +18,10 @@ export default class AddProductScreen extends React.Component {
       brand: '',
       name: '',
       ingredients: '',
-      isModalVisible: null,
-      id: '',
-      message: '',
-    }
+      // isModalVisible: null,
+      // id: '',
+      // message: '',
+    };
   }
 
   onBrandChange = (event) => {
@@ -57,13 +58,15 @@ export default class AddProductScreen extends React.Component {
           />
           <Text style={fonts.small}>INGREDIENTS</Text>
           <TextInput
-            style={form.input}
+            style={[form.input, { marginBottom: 45 }]}
             value={this.state.ingredients}
             onChange={this.onIngredientsChange}
             placeholder="Water, Dimethicone, Aloe, ..."
           />
           <Button
-            color="pink"
+            containerViewStyle={form.buttonWrapper}
+            buttonStyle={form.button}
+            iconRight={{ name: 'keyboard-arrow-right', size: 24 }}
             title="Add product"
             onPress={this.onPressSubmit}
           />

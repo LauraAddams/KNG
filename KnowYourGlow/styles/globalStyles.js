@@ -46,7 +46,6 @@ export const form = StyleSheet.create({
   },
   button: {
     padding: 7,
-    fontWeight: fontBold,
     backgroundColor: brandBlack,
   },
 });

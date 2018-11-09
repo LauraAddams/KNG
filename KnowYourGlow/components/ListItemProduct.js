@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { View, Text, TouchableHighlight, StyleSheet } from 'react-native';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { Icon } from 'react-native-elements';
 
 import font from '../styles/fonts';
 import containers from '../styles/containers';
@@ -22,18 +22,18 @@ const styles = StyleSheet.create({
 });
 
 export default class ListItem extends Component {
-  state = { isModalVisible: false }
+  // state = { isModalVisible: false }
 
   onPress = () => {
     this.props.onPressItem(this.props.item.id);
   }
 
   onPressAdd = () => {
-    this.setState({ isModalVisible: true });
+    // this.setState({ isModalVisible: true });
   }
 
-  resetModal() {
-    this.setState({ isModalVisible: false });
+  resetModal = () => {
+    // this.setState({ isModalVisible: false });
   }
 
   render() {
@@ -46,10 +46,11 @@ export default class ListItem extends Component {
 
             <View style={[containers.details, { marginBottom: 5 }]}>
               <Text style={font.smallBold}>{brand}</Text>
-              <MaterialCommunityIcons
+              <Icon
+                type="material-community"
                 name="plus"
                 size={16}
-                style={styles.addIcon}
+                iconStyle={styles.addIcon}
               />
             </View>
 
