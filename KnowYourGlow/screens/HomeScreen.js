@@ -4,7 +4,6 @@ import {
   StyleSheet,
   Text,
   Button,
-  TouchableOpacity,
   View,
 } from 'react-native';
 import { WebBrowser } from 'expo';
@@ -34,6 +33,8 @@ export default class HomeScreen extends React.Component {
     title: 'MY ROUTINE',
   };
 
+  state = { checked: true };
+
   _handleLearnMorePress = () => {
     WebBrowser.openBrowserAsync('https://docs.expo.io/versions/latest/guides/development-mode');
   };
@@ -47,9 +48,9 @@ export default class HomeScreen extends React.Component {
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-            <Text style={styles.getStartedText}>
-              Hey cutie ;)
-            </Text>
+          <Text style={styles.getStartedText}>
+            Hey cutie ;)
+          </Text>
 
           <Button
             title="Tagged Ingredients"
